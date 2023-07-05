@@ -240,10 +240,10 @@ input:checked ~ .bubble::after {
     display: flex;
 	flex-direction: row;
 	align-items: center;
-	.icon-voice {
-		padding-top: 6rem;
-		border: none;
-		outline: none;
-	}
 }
 
+.container .icon-voice {
+	padding-top: 6rem;
+	border: none;
+	outline: none;
+}
