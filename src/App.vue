@@ -96,7 +96,7 @@ const toggleButton = () => {
 			<h2 class="title">
 				Hi, <input type="text" id="name" placeholder="Name here" v-model="name">
 			</h2>
-			<a class="hidden" href="https://www.flaticon.com/free-icons/to-do" title="to do icons">To do icons created by Freepik - Flaticon</a>
+			<a hidden href="https://www.flaticon.com/free-icons/to-do" title="to do icons">To do icons created by Freepik - Flaticon</a>
 		</section>
 		<section class="create-todo">
 			<h3>CREATE A TODO</h3>

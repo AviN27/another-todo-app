@@ -242,7 +242,3 @@ input:checked ~ .bubble::after {
 	border: none;
 	outline: none;
 }
-
-.hidden {
-	
-}
