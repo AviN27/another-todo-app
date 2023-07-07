@@ -96,58 +96,60 @@ const toggleButton = () => {
 			<h2 class="title">
 				Hi, <input type="text" id="name" placeholder="Name here" v-model="name">
 			</h2>
+			<a class="hidden" href="https://www.flaticon.com/free-icons/to-do" title="to do icons">To do icons created by Freepik - Flaticon</a>
 		</section>
-		<div class="container">
-			<section class="create-todo">
-				<h3>CREATE A TODO</h3>
-				<h4>Type or click the mic to speak</h4>
-					<form id="new-todo-form" @submit.prevent="addTodo">
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3>
+			<h4>Type or click the mic to speak</h4>
+				<form id="new-todo-form" @submit.prevent="">
+					<div class="container">
 						<input 
 							type="text" 
 							name="content" 
 							id="content" 
 							placeholder="e.g. make a video"
 							v-model="input_content" />
-						
-						<div class="transcript" v-text="transcript" hidden></div>
-						
-						<h4>Pick a category</h4>
-						<div class="options">
 
-							<label>
-								<input 
-									type="radio" 
-									name="category" 
-									id="category1" 
-									value="business"
-									v-model="input_category" />
-								<span class="bubble business"></span>
-								<div>Business</div>
-							</label>
+						<button class="icon-voice" @click="toggleButton()" v-if="!isMic">
+							<font-awesome-icon icon="fa-solid fa-microphone-lines" size="2xl" style="color: #cfcfc4;" />
+						</button>
+						<button class="icon-voice" @click="toggleButton()" v-if="isMic">
+							<font-awesome-icon icon="fa-solid fa-microphone-lines-slash" size="2xl" style="color: #cfcfc4;" />
+						</button>
+					</div>
+					
+					<div class="transcript" v-text="transcript" hidden></div>
+					
+					<h4>Pick a category</h4>
+					<div class="options">
 
-							<label>
-								<input 
-									type="radio" 
-									name="category" 
-									id="category2" 
-									value="personal"
-									v-model="input_category" />
-								<span class="bubble personal"></span>
-								<div>Personal</div>
-							</label>
+						<label>
+							<input 
+								type="radio" 
+								name="category" 
+								id="category1" 
+								value="business"
+								v-model="input_category" />
+							<span class="bubble business"></span>
+							<div>Business</div>
+						</label>
 
-						</div>
+						<label>
+							<input 
+								type="radio" 
+								name="category" 
+								id="category2" 
+								value="personal"
+								v-model="input_category" />
+							<span class="bubble personal"></span>
+							<div>Personal</div>
+						</label>
 
-						<input type="submit" value="Add todo" />
-					</form>
-			</section>
-			<button class="icon-voice" @click="toggleButton()" v-if="!isMic">
-				<font-awesome-icon icon="fa-solid fa-microphone-lines" size="2xl" style="color: #cfcfc4;" />
-			</button>
-			<button class="icon-voice" @click="toggleButton()" v-if="isMic">
-				<font-awesome-icon icon="fa-solid fa-microphone-lines-slash" size="2xl" style="color: #cfcfc4;" />
-			</button>
-		</div>
+					</div>
+
+					<button class="submit" @click="addTodo">Add todo</button>
+				</form>
+		</section>
 
 		<section class="todo-list">
 			<h3>TODO LIST</h3>

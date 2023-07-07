@@ -20,11 +20,6 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-.app {
-	
-	text-align: left;
-}
-
 input:not([type="radio"]):not([type="checkbox"]), button {
 	appearance: none;
 	border: none;
@@ -78,7 +73,7 @@ h4 {
 
 .create-todo input[type="text"] {
 	display: block;
-	width: 140%;
+	width: 83%;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
 	color: var(--dark);
@@ -157,9 +152,9 @@ input:checked ~ .bubble::after {
 	margin-top: 1rem;
 }
 
-.create-todo input[type="submit"] {
+.create-todo .submit {
 	display: block;
-	width: 140%;
+	width: 100%;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
 	color: #cfcfc4;
@@ -243,7 +238,11 @@ input:checked ~ .bubble::after {
 }
 
 .container .icon-voice {
-	padding-top: 6rem;
+	padding-bottom: 2rem;
 	border: none;
 	outline: none;
+}
+
+.hidden {
+	
 }
